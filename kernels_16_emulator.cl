@@ -3,6 +3,7 @@
 #define MAX_VARIABLE_EDGES 3
 #define MAX_CHECK_EDGES 6
 
+// This is for the local memory now
 
 // Integer options
 #define LLR_TYPE short
