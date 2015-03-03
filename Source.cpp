@@ -322,7 +322,7 @@ void ldpcDecodeOpenCL(cl_context			context,
 	AxCheckError(clSetKernelArg(LDPCkernel,2,sizeof(cl_int),&first));
 	AxCheckError(clSetKernelArg(LDPCkernel,3,sizeof(cl_int),&writeback));
 
-
+	// Test
 
 	size_t offset_variable = 0;
 	size_t global_work_size_variablenode = n_vars;
