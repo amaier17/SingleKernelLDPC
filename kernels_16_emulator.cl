@@ -45,7 +45,7 @@ typedef struct CheckNodes
 }CheckNode;
 
 // There will just be one giant kernel that handles the entire execution path
-__kernel __attribute__((reqd_work_group_size(N_VARIABLE_NODES,1,1))) void LDPCDecoder(__global VariableNode * restrict v_nodes, __global CheckNode * restrict c_nodes,int writeback) {
+__kernel __attribute__((reqd_work_group_size(N_CHECK_NODES,1,1))) void LDPCDecoder(__global VariableNode * restrict v_nodes, __global CheckNode * restrict c_nodes,int writeback) {
 	int workitem_id = get_global_id(0);
 	
 	// Now let's make local memory for the variable nodes
@@ -54,132 +54,133 @@ __kernel __attribute__((reqd_work_group_size(N_VARIABLE_NODES,1,1))) void LDPCDe
 	// First we need to loadup our local memory with the variable node information
 	vnodes[workitem_id] = v_nodes[workitem_id];
 	
-	// First we need to do the CheckNode calculation
-	// But we don't need all of the work-items to do it
+	// Now that we only have N_CHECK_NODES threads, each thread needs to load two variable nodes
+	vnodes[workitem_id + N_CHECK_NODES] = v_nodes[workitem_id + N_CHECK_NODES];
+	
 
-	
-	// If we are over the number of check nodes we'll just wait
-	if (workitem_id < N_CHECK_NODES) {
-	
-		CheckNode check = c_nodes[workitem_id];
+	// First we need to do the checknode calculation
+	CheckNode check = c_nodes[workitem_id];
 		
 
-		// Let's now start the process
-
+	// Let's now start the process
 		// We need to find the first and second minimum
-		LLR first_min = MAX_LLR;
-		LLR second_min = MAX_LLR;
-		LLR test;
+	LLR first_min = MAX_LLR;
+	LLR second_min = MAX_LLR;
+	LLR testinput;
 
+	// Let's get the first minimum as well as the index of this minimum
+	int min_index = 0;
+	for(int input=0; input<check.n_inputs; input++)
+	{
+		// Remember to take the absolute value 
+		// This is as simple as masking off the sign bit
+		testinput = check.inputs[input] & MAX_LLR;
 
-		// Let's get the first minimum as well as the index of this minimum
-		int min_index = 0;
-		for(int input=0; input<check.n_inputs; input++)
+		if(testinput < first_min)
 		{
-
-			// Remember to take the absolute value 
-			// This is as simple as masking off the sign bit
-			test = check.inputs[input] & MAX_LLR;
-	
-			if(test < first_min)
-			{
-				first_min = test;
-				min_index = input;
-			}
-
+			first_min = testinput;
+			min_index = input;
 		}
-
-		// Now we get the second minimum which means ignoring the minimum index
-		for(int input =0; input < check.n_inputs; input++)
-		{
-			test = check.inputs[input] & MAX_LLR;
-	
-			if(input != min_index && test < second_min)
-			{
-				second_min = test;
-			}
-		}
-		
-		// Now we need to get the parity of the inputs
-		// This will determine the sign of the outputs
-		LLR parity = 0;
-		for(int input=0; input<check.n_inputs; input++)
-		{
-			parity ^= check.inputs[input] & SIGN_BIT;
-		}
-	
-	
-	
-	
-		// Now that we have the parity, we can continue
-		// This section will calculate what to place in each of the outputs 
-		for(int input=0; input<check.n_inputs; input++)
-		{
-			// Let's get the variable node index we are dealing with
-			int variableNode_index = check.variablenode_indexes[input];
-			
-			// Now we need to find out what input box number we are, in the variable node
-			// we are looking at
-			// This means finding the index based on the connections for that node
-			int c_node_index = check.index;
-			int input_index = 0;
-			for(int i=0; i<vnodes[variableNode_index].n_checknodes; i++)
-			{
-				if(vnodes[variableNode_index].checknode_indexes[i] == c_node_index)
-				{
-					input_index = i;
-				}
-			}
-	
-			// Now we can move on to calculating the output
-			LLR sign_b = parity;
-	
-			// The sign bit is assigned to complete the parity compared to the other inputs
-			sign_b ^= check.inputs[input] & SIGN_BIT;
-	
-			LLR to_vnode;
-	
-			// The magnitude is decided as either the first or the second minimum depending on if we are
-			// at the index of the first minimum.
-			if(input != min_index)
-				to_vnode = first_min;
-			else
-				to_vnode = second_min;
-	
-	
-			// Before we send the data to the variable node, we need to convert it to 2's complement
-			if(sign_b)
-				to_vnode *= -1;
-	
-			// Send the information
-			//v_nodes[variableNode_index].inputs[input_index] = to_vnode;
-			vnodes[variableNode_index].inputs[input_index] = to_vnode;
-			if(writeback)
-				v_nodes[variableNode_index].inputs[input_index] = to_vnode;
-	
-		}
-		
-		
 	}
+	
+	// Now we get the second minimum which means ignoring the minimum index
+	for(int input =0; input < check.n_inputs; input++)
+	{
+		testinput = check.inputs[input] & MAX_LLR;
+
+		if(input != min_index && testinput < second_min)
+		{
+			second_min = testinput;
+		}
+	}
+	
+	// Now we need to get the parity of the inputs
+	// This will determine the sign of the outputs
+	LLR parity = 0;
+	for(int input=0; input<check.n_inputs; input++)
+	{
+		parity ^= check.inputs[input] & SIGN_BIT;
+	}
+
+
+
+
+	// Now that we have the parity, we can continue
+	// This section will calculate what to place in each of the outputs 
+	for(int input=0; input<check.n_inputs; input++)
+	{
+		// Let's get the variable node index we are dealing with
+		int variableNode_index = check.variablenode_indexes[input];
+		
+		// Now we need to find out what input box number we are, in the variable node
+		// we are looking at
+		// This means finding the index based on the connections for that node
+		int c_node_index = check.index;
+		int input_index = 0;
+		for(int i=0; i<vnodes[variableNode_index].n_checknodes; i++)
+		{
+			if(vnodes[variableNode_index].checknode_indexes[i] == c_node_index)
+			{
+				input_index = i;
+			}
+		}
+
+		// Now we can move on to calculating the output
+		LLR sign_b = parity;
+
+		// The sign bit is assigned to complete the parity compared to the other inputs
+		sign_b ^= check.inputs[input] & SIGN_BIT;
+
+		LLR to_vnode;
+
+		// The magnitude is decided as either the first or the second minimum depending on if we are
+		// at the index of the first minimum.
+		if(input != min_index)
+			to_vnode = first_min;
+		else
+			to_vnode = second_min;
+
+
+		// Before we send the data to the variable node, we need to convert it to 2's complement
+		if(sign_b)
+			to_vnode *= -1;
+
+		// Send the information
+		//v_nodes[variableNode_index].inputs[input_index] = to_vnode;
+		
+		// We write it to local memory unless the writeback bit has been set
+		vnodes[variableNode_index].inputs[input_index] = to_vnode;
+		if(writeback)
+			v_nodes[variableNode_index].inputs[input_index] = to_vnode;
+
+	}
+	
+		
+	
 	
 	barrier(CLK_LOCAL_MEM_FENCE | CLK_GLOBAL_MEM_FENCE);
 	
 	// Now let's do the variable node stuff
-	
+	// Remember that each work-item now needs to do two variable nodes
+	// We will do them simultaneously
 	
 	// Get the current variable node we are working on
 	VariableNode variable = vnodes[workitem_id];
+	VariableNode variable2 = vnodes[workitem_id + N_CHECK_NODES];
 	
 	// We should also load up the other information
 	
 
 	// Now we need to get the total sum
 	LLR total = 0;
+	LLR total2 = 0;
 	int test;
+	int test2;
 	for(int input = 0; input<variable.n_inputs; input++)
 	{
 		// Add the current input to the total
 		test = total + variable.inputs[input];
+		test2 = total2 + variable2.inputs[input];
 		
 		// Check that the new total isn't going to cause an overflow with our LLR bits
 		if(test > MAX_LLR) {
@@ -191,6 +192,16 @@ __kernel __attribute__((reqd_work_group_size(N_VARIABLE_NODES,1,1))) void LDPCDe
 		else {
 			total = test;
 		}
+		
+		if(test2 > MAX_LLR) {
+			total2 = MAX_LLR;
+		}
+		else if(test2 < MAX_NEG_LLR) {
+			total2 = MAX_NEG_LLR;
+		}
+		else {
+			total2 = test2;
+		}
 			
 	}
 
@@ -200,19 +211,24 @@ __kernel __attribute__((reqd_work_group_size(N_VARIABLE_NODES,1,1))) void LDPCDe
 
 
 	LLR current;
+	LLR current2;
 	// Now we need to subtract each of the checknodes individually
 	for(int input = 0; input<variable.n_checknodes; input++)
 	{
 		// Get the index of the checknode of which we got a value and need to send one back
 		int checkNode_index = variable.checknode_indexes[input];
+		int checkNode_index2 = variable2.checknode_indexes[input];
 
 		// We subtract off the current one to get the sum of all others
 		current = total - variable.inputs[input];
+		current2 = total2 - variable2.inputs[input];
 
 		// Now we need to stuff that value back to the checknode
 		// But first we need to find out which index of the checknode we belong to
 		int v_index = variable.index;
 		int input_index = 0;
+		int v_index2 = variable2.index;
+		int input_index2 = 0;
 		
 		// Iterate over all the checknode inputs to find ours
 		for(int i=0; i<c_nodes[checkNode_index].n_inputs; i++)
@@ -222,21 +238,37 @@ __kernel __attribute__((reqd_work_group_size(N_VARIABLE_NODES,1,1))) void LDPCDe
 			{
 				input_index = i;
 			}
+			
+			if(c_nodes[checkNode_index2].variablenode_indexes[i] == v_index2)
+			{
+				input_index2 = i;
+			}
 		}
 
 		// Let's write the value into the checknode
 		// But first we need to convert it back to sign and magnitude
 		LLR mag=0;
 		LLR sign_b = 0;
+		LLR mag2 = 0;
+		LLR sign_b2 = 0;
 		if(current<0){
 			current *= -1;
 			sign_b = SIGN_BIT;
 		}
 
 		mag = current & MAX_LLR;
+		
+		if(current2<0) {
+			current2 *= -1;
+			sign_b2 = SIGN_BIT;
+		}
+		
+		mag2 = current2 & MAX_LLR;
 
 		// Write the value to the checknodes in sign and magnitude format
 		c_nodes[checkNode_index].inputs[input_index] = sign_b | mag;
+		
+		c_nodes[checkNode_index2].inputs[input_index2] = sign_b2 | mag2;
 	}
 }
 

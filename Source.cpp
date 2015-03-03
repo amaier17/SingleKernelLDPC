@@ -324,8 +324,8 @@ void ldpcDecodeOpenCL(cl_context			context,
 
 
 	size_t offset_variable = 0;
-	size_t global_work_size_variablenode = n_vars;
-	size_t local_work_size_variablenode = n_vars;
+	size_t global_work_size_variablenode = n_checks;
+	size_t local_work_size_variablenode = n_checks;
 
 	printf("Starting kernel iterations\n");
 	for(int iter=0; iter<N_ITERATIONS; iter++)
