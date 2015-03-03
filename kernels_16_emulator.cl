@@ -45,14 +45,22 @@ typedef struct CheckNodes
 }CheckNode;
 
 // There will just be one giant kernel that handles the entire execution path
-__kernel __attribute__((reqd_work_group_size(N_VARIABLE_NODES,1,1))) void LDPCDecoder(__global VariableNode * restrict v_nodes, __global CheckNode * restrict c_nodes,int writeback) {
+__kernel __attribute__((reqd_work_group_size(N_VARIABLE_NODES,1,1))) void LDPCDecoder(__global VariableNode * restrict v_nodes, __global CheckNode * restrict c_nodes,int init,int writeback) {
 	int workitem_id = get_global_id(0);
 	
 	// Now let's make local memory for the variable nodes
 	__local VariableNode vnodes[N_VARIABLE_NODES];
 	
-	// First we need to loadup our local memory with the variable node information
-	vnodes[workitem_id] = v_nodes[workitem_id];
+	// Now let's make local memory for the check nodes
+	__local CheckNode cnodes[N_CHECK_NODES];
+	
+	if(init) {
+		// First we need to loadup our local memory with the variable node information
+		vnodes[workitem_id] = v_nodes[workitem_id];
+		
+		if(workitem_id < N_CHECK_NODES)
+			cnodes[workitem_id] = c_nodes[workitem_id];
+	}
 	
 	// First we need to do the CheckNode calculation
 	// But we don't need all of the work-items to do it
@@ -61,7 +69,7 @@ __kernel __attribute__((reqd_work_group_size(N_VARIABLE_NODES,1,1))) void LDPCDe
 	// If we are over the number of check nodes we'll just wait
 	if (workitem_id < N_CHECK_NODES) {
 	
-		CheckNode check = c_nodes[workitem_id];
+		CheckNode check = cnodes[workitem_id];
 		
 
 		// Let's now start the process
@@ -215,10 +223,10 @@ __kernel __attribute__((reqd_work_group_size(N_VARIABLE_NODES,1,1))) void LDPCDe
 		int input_index = 0;
 		
 		// Iterate over all the checknode inputs to find ours
-		for(int i=0; i<c_nodes[checkNode_index].n_inputs; i++)
+		for(int i=0; i<cnodes[checkNode_index].n_inputs; i++)
 		{
 			// If this check node index matches our index, this is the location to which we write in
-			if(c_nodes[checkNode_index].variablenode_indexes[i] == v_index)
+			if(cnodes[checkNode_index].variablenode_indexes[i] == v_index)
 			{
 				input_index = i;
 			}
@@ -236,7 +244,9 @@ __kernel __attribute__((reqd_work_group_size(N_VARIABLE_NODES,1,1))) void LDPCDe
 		mag = current & MAX_LLR;
 
 		// Write the value to the checknodes in sign and magnitude format
-		c_nodes[checkNode_index].inputs[input_index] = sign_b | mag;
+		cnodes[checkNode_index].inputs[input_index] = sign_b | mag;
+		if(writeback)
+			c_nodes[checkNode_index].inputs[input_index] = sign_b | mag;
 	}
 }
 

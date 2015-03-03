@@ -319,7 +319,8 @@ void ldpcDecodeOpenCL(cl_context			context,
 #endif
 	AxCheckError(clSetKernelArg(LDPCkernel,0,sizeof(variable_nodes),&variable_nodes));
 	AxCheckError(clSetKernelArg(LDPCkernel,1,sizeof(check_nodes),&check_nodes));
-	AxCheckError(clSetKernelArg(LDPCkernel,2,sizeof(cl_int),&writeback));
+	AxCheckError(clSetKernelArg(LDPCkernel,2,sizeof(cl_int),&first));
+	AxCheckError(clSetKernelArg(LDPCkernel,3,sizeof(cl_int),&writeback));
 
 
 
@@ -333,7 +334,12 @@ void ldpcDecodeOpenCL(cl_context			context,
 		if(iter == N_ITERATIONS)
 		{
 			writeback = 1;
-			AxCheckError(clSetKernelArg(LDPCkernel,2,sizeof(cl_int),&writeback));
+			AxCheckError(clSetKernelArg(LDPCkernel,3,sizeof(cl_int),&writeback));
+		}
+		if(iter == 1)
+		{
+			first =0;
+			AxCheckError(clSetKernelArg(LDPCkernel,2,sizeof(cl_int),&first));
 		}
 #ifdef PRINT_DEBUG
 		printf("Press any key to start Iteration %d check nodes\n",iter);
