@@ -45,11 +45,18 @@ typedef struct CheckNodes
 }CheckNode;
 
 // There will just be one giant kernel that handles the entire execution path
-__kernel __attribute__((reqd_work_group_size(N_VARIABLE_NODES,1,1))) void LDPCDecoder(__global VariableNode * restrict v_nodes, __global CheckNode * restrict c_nodes) {
+__kernel __attribute__((reqd_work_group_size(N_VARIABLE_NODES,1,1))) void LDPCDecoder(__global VariableNode * restrict v_nodes, __global CheckNode * restrict c_nodes,int writeback) {
 	int workitem_id = get_global_id(0);
+	
+	// Now let's make local memory for the variable nodes
+	__local VariableNode vnodes[N_VARIABLE_NODES];
+	
+	// First we need to loadup our local memory with the variable node information
+	vnodes[workitem_id] = v_nodes[workitem_id];
 	
 	// First we need to do the CheckNode calculation
 	// But we don't need all of the work-items to do it
+
 	
 	// If we are over the number of check nodes we'll just wait
 	if (workitem_id < N_CHECK_NODES) {
@@ -116,9 +123,9 @@ __kernel __attribute__((reqd_work_group_size(N_VARIABLE_NODES,1,1))) void LDPCDe
 			// This means finding the index based on the connections for that node
 			int c_node_index = check.index;
 			int input_index = 0;
-			for(int i=0; i<v_nodes[variableNode_index].n_checknodes; i++)
+			for(int i=0; i<vnodes[variableNode_index].n_checknodes; i++)
 			{
-				if(v_nodes[variableNode_index].checknode_indexes[i] == c_node_index)
+				if(vnodes[variableNode_index].checknode_indexes[i] == c_node_index)
 				{
 					input_index = i;
 				}
@@ -145,7 +152,10 @@ __kernel __attribute__((reqd_work_group_size(N_VARIABLE_NODES,1,1))) void LDPCDe
 				to_vnode *= -1;
 	
 			// Send the information
-			v_nodes[variableNode_index].inputs[input_index] = to_vnode;
+			//v_nodes[variableNode_index].inputs[input_index] = to_vnode;
+			vnodes[variableNode_index].inputs[input_index] = to_vnode;
+			if(writeback)
+				v_nodes[variableNode_index].inputs[input_index] = to_vnode;
 	
 		}
 		
@@ -156,8 +166,11 @@ __kernel __attribute__((reqd_work_group_size(N_VARIABLE_NODES,1,1))) void LDPCDe
 	
 	// Now let's do the variable node stuff
 	
+	
 	// Get the current variable node we are working on
-	VariableNode variable = v_nodes[workitem_id];
+	VariableNode variable = vnodes[workitem_id];
+	
+	// We should also load up the other information
 	
 
 	// Now we need to get the total sum

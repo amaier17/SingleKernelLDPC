@@ -248,7 +248,7 @@ void ldpcDecodeOpenCL(cl_context			context,
 
 	// Now we need to introduce some noise into our codeword
 	// Note that this function changes our codeword input variable
-	introduceNoise(codeword,20,n_vars);
+	introduceNoise(codeword,2,n_vars);
 
 	// Now I need to add in the step to conver the number to an integer
 	LLR * codeword_LLR = convertToLLR(codeword,n_vars);
@@ -319,6 +319,7 @@ void ldpcDecodeOpenCL(cl_context			context,
 #endif
 	AxCheckError(clSetKernelArg(LDPCkernel,0,sizeof(variable_nodes),&variable_nodes));
 	AxCheckError(clSetKernelArg(LDPCkernel,1,sizeof(check_nodes),&check_nodes));
+	AxCheckError(clSetKernelArg(LDPCkernel,2,sizeof(cl_int),&writeback));
 
 
 
@@ -329,6 +330,11 @@ void ldpcDecodeOpenCL(cl_context			context,
 	printf("Starting kernel iterations\n");
 	for(int iter=0; iter<N_ITERATIONS; iter++)
 	{
+		if(iter == N_ITERATIONS)
+		{
+			writeback = 1;
+			AxCheckError(clSetKernelArg(LDPCkernel,2,sizeof(cl_int),&writeback));
+		}
 #ifdef PRINT_DEBUG
 		printf("Press any key to start Iteration %d check nodes\n",iter);
 		getchar();
@@ -351,8 +357,8 @@ void ldpcDecodeOpenCL(cl_context			context,
 #ifdef PRINT_DEBUG
 
 		// Now let's read back the data
-		AxCheckError(clEnqueueReadBuffer(checkNodeQueue,check_nodes,CL_TRUE,0,N_BYTES_CHECK,c_nodes,0,NULL,NULL));
-		AxCheckError(clEnqueueReadBuffer(variableNodeQueue,variable_nodes,CL_TRUE,0,N_BYTES_VARIABLE,v_nodes,0,NULL,NULL));
+		AxCheckError(clEnqueueReadBuffer(LDPCqueue,check_nodes,CL_TRUE,0,N_BYTES_CHECK,c_nodes,0,NULL,NULL));
+	AxCheckError(clEnqueueReadBuffer(LDPCqueue,variable_nodes,CL_TRUE,0,N_BYTES_VARIABLE,v_nodes,0,NULL,NULL));
 
 		// Now that we have the data we should debug it
 		// We want to print out everything check node related
@@ -391,8 +397,8 @@ void ldpcDecodeOpenCL(cl_context			context,
 
 #ifdef PRINT_DEBUG
 
-		AxCheckError(clEnqueueReadBuffer(variableNodeQueue,variable_nodes,CL_TRUE,0,N_BYTES_VARIABLE,v_nodes,0,NULL,NULL));
-		AxCheckError(clEnqueueReadBuffer(checkNodeQueue,check_nodes,CL_TRUE,0,N_BYTES_CHECK,c_nodes,0,NULL,NULL));
+		AxCheckError(clEnqueueReadBuffer(LDPCqueue,check_nodes,CL_TRUE,0,N_BYTES_CHECK,c_nodes,0,NULL,NULL));
+	AxCheckError(clEnqueueReadBuffer(LDPCqueue,variable_nodes,CL_TRUE,0,N_BYTES_VARIABLE,v_nodes,0,NULL,NULL));
 		
 		// We want to print out everything check node related
 		for(int shownode = 0; shownode<n_vars; shownode++) {
@@ -574,7 +580,7 @@ float* getCodeword(int size)
 	for(int i=0; i<size; i++)
 		input[i] = 0;
 
-	input[0] = 1;
+	//input[0] = 1;
 
 	// Convert it to BPSK
 	// 0 -> 1, 1 -> -1
@@ -836,7 +842,7 @@ double generate_random_number()
 #define C3 4294967280
 #define MAX 4294967295
 
-
+	srand(45);
 	static unsigned int s1 = rand();
 	static unsigned int s2 = rand();
 	static unsigned int s3 = rand();
