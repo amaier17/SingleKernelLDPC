@@ -4,7 +4,7 @@
 #define MAX_CHECK_EDGES 6
 
 // This is for the local memory now
-
+// This is a change
 // Integer options
 #define LLR_TYPE short
 #define N_BITS_LLR (sizeof(LLR_TYPE)*8) // 8 bits per byte
