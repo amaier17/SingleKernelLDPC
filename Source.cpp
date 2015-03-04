@@ -1,4 +1,4 @@
-#define ALTERA
+//#define ALTERA
 #include <iostream>
 #include <fstream>
 #include <ctime>
@@ -248,7 +248,7 @@ void ldpcDecodeOpenCL(cl_context			context,
 
 	// Now we need to introduce some noise into our codeword
 	// Note that this function changes our codeword input variable
-	introduceNoise(codeword,2,n_vars);
+	introduceNoise(codeword,-4,n_vars);
 
 	// Now I need to add in the step to conver the number to an integer
 	LLR * codeword_LLR = convertToLLR(codeword,n_vars);
@@ -498,7 +498,7 @@ void setFileNames() {
 #ifdef ALTERA
 	_snprintf(KERNEL_FILENAME,MAX_LINE,"kernels_%d.aocx",LDPC_SIZE);
 #else
-	_snprintf(KERNEL_FILENAME,MAX_LINE,"../kernels_%d.cl",LDPC_SIZE);
+	_snprintf(KERNEL_FILENAME,MAX_LINE,"../kernels_%d_emulator.cl",LDPC_SIZE);
 #endif
 }
 

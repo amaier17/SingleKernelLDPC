@@ -1,0 +1,36 @@
+This file is a result from the Quick Debug setting.  The values for each iteration represent the decimal version of the check node satisifed booleans.
+In other words, the check nodes are checked for their satisfying parity conditions and the binary results from all the checknodes are combined into a single decimal number.
+In order to verify the accuracy of this LDPC you will need to compare the below values with that of the Floating Point version or another previously verified LDPC
+
+0              82             
+1              164            
+2              207            
+3              216            
+4              133            
+5              82             
+6              0              
+7              0              
+8              0              
+9              0              
+10             0              
+11             0              
+12             0              
+13             0              
+14             0              
+15             0              
+16             0              
+17             0              
+18             0              
+19             0              
+20             0              
+21             0              
+22             0              
+23             0              
+24             0              
+25             0              
+26             0              
+27             0              
+28             0              
+29             0              
+30             0              
+31             0              
