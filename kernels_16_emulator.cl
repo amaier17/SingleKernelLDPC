@@ -74,6 +74,10 @@ __kernel __attribute__((reqd_work_group_size(N_CHECK_NODES,1,1))) void LDPCDecod
 	LLR first_min = MAX_LLR;
 	LLR second_min = MAX_LLR;
 	LLR testinput;
+	
+	LLR test_first_min = ((((check.inputs[0]&MAX_LLR) < (check.inputs[1]&MAX_LLR) ? (check.inputs[0]&MAX_LLR) : (check.inputs[1]&MAX_LLR)) < ((check.inputs[2]&MAX_LLR) < (check.inputs[3]&MAX_LLR) ? (check.inputs[2]&MAX_LLR) : (check.inputs[3]&MAX_LLR)) ?  ((check.inputs[0]&MAX_LLR) < (check.inputs[1]&MAX_LLR) ? (check.inputs[0]&MAX_LLR) : (check.inputs[1]&MAX_LLR)) : ((check.inputs[2]&MAX_LLR) < (check.inputs[3]&MAX_LLR) ? (check.inputs[2]&MAX_LLR) : (check.inputs[3]&MAX_LLR))) < ((check.inputs[4]&MAX_LLR) < (check.inputs[5]&MAX_LLR) ? (check.inputs[4]&MAX_LLR) : (check.inputs[5]&MAX_LLR)) ? (((check.inputs[0]&MAX_LLR) < (check.inputs[1]&MAX_LLR) ? (check.inputs[0]&MAX_LLR) : (check.inputs[1]&MAX_LLR)) < ((check.inputs[2]&MAX_LLR) < (check.inputs[3]&MAX_LLR) ? (check.inputs[2]&MAX_LLR) : (check.inputs[3]&MAX_LLR)) ?  ((check.inputs[0]&MAX_LLR) < (check.inputs[1]&MAX_LLR) ? (check.inputs[0]&MAX_LLR) : (check.inputs[1]&MAX_LLR)) : ((check.inputs[2]&MAX_LLR) < (check.inputs[3]&MAX_LLR) ? (check.inputs[2]&MAX_LLR) : (check.inputs[3]&MAX_LLR))) : ((check.inputs[4]&MAX_LLR) < (check.inputs[5]&MAX_LLR) ? (check.inputs[4]&MAX_LLR) : (check.inputs[5]&MAX_LLR)));
+	
+	
 
 	// Let's get the first minimum as well as the index of this minimum
 	int min_index = 0;
@@ -88,6 +92,10 @@ __kernel __attribute__((reqd_work_group_size(N_CHECK_NODES,1,1))) void LDPCDecod
 			first_min = testinput;
 			min_index = input;
 		}
+	}
+	
+	if(first_min != test_first_min) {
+		printf("THEY'RE DIFFERENT!   %d    %d\n",test_first_min,first_min);
 	}
 	
 	// Now we get the second minimum which means ignoring the minimum index
