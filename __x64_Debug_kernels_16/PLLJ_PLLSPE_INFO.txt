@@ -1,0 +1,385 @@
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip
+PLLJITTER	20
+PLLSPEmax	50
+PLLSPEmin	-50
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pcs:inst_sv_pcs|sv_pcs_ch:ch[0].inst_sv_pcs_ch|sv_hssi_8g_rx_pcs_rbc:inst_sv_hssi_8g_rx_pcs|wys
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pcs:inst_sv_pcs|sv_pcs_ch:ch[0].inst_sv_pcs_ch|sv_hssi_8g_tx_pcs_rbc:inst_sv_hssi_8g_tx_pcs|wys
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pcs:inst_sv_pcs|sv_pcs_ch:ch[1].inst_sv_pcs_ch|sv_hssi_8g_rx_pcs_rbc:inst_sv_hssi_8g_rx_pcs|wys
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pcs:inst_sv_pcs|sv_pcs_ch:ch[1].inst_sv_pcs_ch|sv_hssi_8g_tx_pcs_rbc:inst_sv_hssi_8g_tx_pcs|wys
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pcs:inst_sv_pcs|sv_pcs_ch:ch[2].inst_sv_pcs_ch|sv_hssi_8g_rx_pcs_rbc:inst_sv_hssi_8g_rx_pcs|wys
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pcs:inst_sv_pcs|sv_pcs_ch:ch[2].inst_sv_pcs_ch|sv_hssi_8g_tx_pcs_rbc:inst_sv_hssi_8g_tx_pcs|wys
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pcs:inst_sv_pcs|sv_pcs_ch:ch[3].inst_sv_pcs_ch|sv_hssi_8g_rx_pcs_rbc:inst_sv_hssi_8g_rx_pcs|wys
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pcs:inst_sv_pcs|sv_pcs_ch:ch[3].inst_sv_pcs_ch|sv_hssi_8g_tx_pcs_rbc:inst_sv_hssi_8g_tx_pcs|wys
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pcs:inst_sv_pcs|sv_pcs_ch:ch[4].inst_sv_pcs_ch|sv_hssi_8g_rx_pcs_rbc:inst_sv_hssi_8g_rx_pcs|wys
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pcs:inst_sv_pcs|sv_pcs_ch:ch[4].inst_sv_pcs_ch|sv_hssi_8g_tx_pcs_rbc:inst_sv_hssi_8g_tx_pcs|wys
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pcs:inst_sv_pcs|sv_pcs_ch:ch[5].inst_sv_pcs_ch|sv_hssi_8g_rx_pcs_rbc:inst_sv_hssi_8g_rx_pcs|wys
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pcs:inst_sv_pcs|sv_pcs_ch:ch[5].inst_sv_pcs_ch|sv_hssi_8g_tx_pcs_rbc:inst_sv_hssi_8g_tx_pcs|wys
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pcs:inst_sv_pcs|sv_pcs_ch:ch[6].inst_sv_pcs_ch|sv_hssi_8g_rx_pcs_rbc:inst_sv_hssi_8g_rx_pcs|wys
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pcs:inst_sv_pcs|sv_pcs_ch:ch[6].inst_sv_pcs_ch|sv_hssi_8g_tx_pcs_rbc:inst_sv_hssi_8g_tx_pcs|wys
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pcs:inst_sv_pcs|sv_pcs_ch:ch[7].inst_sv_pcs_ch|sv_hssi_8g_rx_pcs_rbc:inst_sv_hssi_8g_rx_pcs|wys
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pcs:inst_sv_pcs|sv_pcs_ch:ch[7].inst_sv_pcs_ch|sv_hssi_8g_tx_pcs_rbc:inst_sv_hssi_8g_tx_pcs|wys
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pcs:inst_sv_pcs|sv_pcs_ch:ch[8].inst_sv_pcs_ch|sv_hssi_8g_rx_pcs_rbc:inst_sv_hssi_8g_rx_pcs|wys
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pcs:inst_sv_pcs|sv_pcs_ch:ch[8].inst_sv_pcs_ch|sv_hssi_8g_tx_pcs_rbc:inst_sv_hssi_8g_tx_pcs|wys
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[0].rx_pma.cdr_refclk_mux0
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[0].rx_pma.rx_cdr
+PLLJITTER	20
+PLLSPEmax	50
+PLLSPEmin	-50
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[0].rx_pma.rx_pma_deser
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[1].rx_pma.cdr_refclk_mux0
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[1].rx_pma.rx_cdr
+PLLJITTER	20
+PLLSPEmax	50
+PLLSPEmin	-50
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[1].rx_pma.rx_pma_deser
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[2].rx_pma.cdr_refclk_mux0
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[2].rx_pma.rx_cdr
+PLLJITTER	20
+PLLSPEmax	50
+PLLSPEmin	-50
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[2].rx_pma.rx_pma_deser
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[3].rx_pma.cdr_refclk_mux0
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[3].rx_pma.rx_cdr
+PLLJITTER	20
+PLLSPEmax	50
+PLLSPEmin	-50
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[3].rx_pma.rx_pma_deser
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[5].rx_pma.cdr_refclk_mux0
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[5].rx_pma.rx_cdr
+PLLJITTER	20
+PLLSPEmax	50
+PLLSPEmin	-50
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[5].rx_pma.rx_pma_deser
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[6].rx_pma.cdr_refclk_mux0
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[6].rx_pma.rx_cdr
+PLLJITTER	20
+PLLSPEmax	50
+PLLSPEmin	-50
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[6].rx_pma.rx_pma_deser
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[7].rx_pma.cdr_refclk_mux0
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[7].rx_pma.rx_cdr
+PLLJITTER	20
+PLLSPEmax	50
+PLLSPEmin	-50
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[7].rx_pma.rx_pma_deser
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[8].rx_pma.cdr_refclk_mux0
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[8].rx_pma.rx_cdr
+PLLJITTER	20
+PLLSPEmax	50
+PLLSPEmin	-50
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_rx_pma:rx_pma.sv_rx_pma_inst|rx_pmas[8].rx_pma.rx_pma_deser
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_tx_pma:tx_pma.sv_tx_pma_inst|sv_tx_pma_ch:tx_pma_insts[0].sv_tx_pma_ch_inst|tx_pma_ch.tx_cgb
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_tx_pma:tx_pma.sv_tx_pma_inst|sv_tx_pma_ch:tx_pma_insts[1].sv_tx_pma_ch_inst|tx_pma_ch.tx_cgb
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_tx_pma:tx_pma.sv_tx_pma_inst|sv_tx_pma_ch:tx_pma_insts[2].sv_tx_pma_ch_inst|tx_pma_ch.tx_cgb
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_tx_pma:tx_pma.sv_tx_pma_inst|sv_tx_pma_ch:tx_pma_insts[3].sv_tx_pma_ch_inst|tx_pma_ch.tx_cgb
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_tx_pma:tx_pma.sv_tx_pma_inst|sv_tx_pma_ch:tx_pma_insts[4].sv_tx_pma_ch_inst|tx_pma_ch.tx_cgb
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_tx_pma:tx_pma.sv_tx_pma_inst|sv_tx_pma_ch:tx_pma_insts[5].sv_tx_pma_ch_inst|tx_pma_ch.tx_cgb
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_tx_pma:tx_pma.sv_tx_pma_inst|sv_tx_pma_ch:tx_pma_insts[6].sv_tx_pma_ch_inst|tx_pma_ch.tx_cgb
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_tx_pma:tx_pma.sv_tx_pma_inst|sv_tx_pma_ch:tx_pma_insts[7].sv_tx_pma_ch_inst|tx_pma_ch.tx_cgb
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_native:inst_sv_xcvr_native|sv_pma:inst_sv_pma|sv_tx_pma:tx_pma.sv_tx_pma_inst|sv_tx_pma_ch:tx_pma_insts[8].sv_tx_pma_ch_inst|tx_pma_ch.tx_cgb
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_plls:sv_xcvr_tx_plls_inst|pll[0].pll.cmu_pll.pll_mux.pll_refclk_select_mux
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|altpcie_sv_hip_avmm_hwtcl:pcie|altpcie_sv_hip_ast_hwtcl:altera_s5_a2p|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|sv_xcvr_pipe_native:g_xcvr.sv_xcvr_pipe_native|sv_xcvr_plls:sv_xcvr_tx_plls_inst|pll[0].pll.cmu_pll.tx_pll
+PLLJITTER	20
+PLLSPEmax	50
+PLLSPEmin	-50
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_acl_kernel_clk:acl_kernel_clk|system_acl_iface_acl_kernel_clk_kernel_pll:kernel_pll|altera_pll:altera_pll_i|altera_stratixv_pll:stratixv_pll|altera_stratixv_pll_base:fpll_0|fpll
+PLLJITTER	47
+PLLSPEmax	50
+PLLSPEmin	-50
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_acl_kernel_clk:acl_kernel_clk|system_acl_iface_acl_kernel_clk_kernel_pll:kernel_pll|altera_pll:altera_pll_i|altera_stratixv_pll:stratixv_pll|counter[0].output_counter
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_acl_kernel_clk:acl_kernel_clk|system_acl_iface_acl_kernel_clk_kernel_pll:kernel_pll|altera_pll:altera_pll_i|altera_stratixv_pll:stratixv_pll|counter[1].output_counter
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_ddr3a:ddr3a|system_acl_iface_ddr3a_pll0:pll0|pll1~FRACTIONAL_PLL
+PLLJITTER	30
+PLLSPEmax	50
+PLLSPEmin	-50
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_ddr3a:ddr3a|system_acl_iface_ddr3a_pll0:pll0|pll1~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_ddr3a:ddr3a|system_acl_iface_ddr3a_pll0:pll0|pll2~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_ddr3a:ddr3a|system_acl_iface_ddr3a_pll0:pll0|pll3~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_ddr3a:ddr3a|system_acl_iface_ddr3a_pll0:pll0|pll6~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_ddr3a:ddr3a|system_acl_iface_ddr3a_pll0:pll0|pll7~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_ddr3a:ddr3a|system_acl_iface_ddr3a_pll0:pll0|pll8~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_ddr3a:ddr3a|system_acl_iface_ddr3a_pll0:pll0|pll9~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_ddr3a:ddr3a|system_acl_iface_ddr3a_pll0:pll0|pll10~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_ddr3a:ddr3b|system_acl_iface_ddr3a_pll0:pll0|pll1~FRACTIONAL_PLL
+PLLJITTER	30
+PLLSPEmax	50
+PLLSPEmin	-50
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_ddr3a:ddr3b|system_acl_iface_ddr3a_pll0:pll0|pll1~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_ddr3a:ddr3b|system_acl_iface_ddr3a_pll0:pll0|pll2~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_ddr3a:ddr3b|system_acl_iface_ddr3a_pll0:pll0|pll3~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_ddr3a:ddr3b|system_acl_iface_ddr3a_pll0:pll0|pll6~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_ddr3a:ddr3b|system_acl_iface_ddr3a_pll0:pll0|pll7~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_ddr3a:ddr3b|system_acl_iface_ddr3a_pll0:pll0|pll8~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_ddr3a:ddr3b|system_acl_iface_ddr3a_pll0:pll0|pll9~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_ddr3a:ddr3b|system_acl_iface_ddr3a_pll0:pll0|pll10~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_temperature_pll:temperature_pll|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL
+PLLJITTER	45
+PLLSPEmax	50
+PLLSPEmin	-50
+
+PLL_Name	system:system_inst|system_acl_iface:acl_iface|system_acl_iface_temperature_pll:temperature_pll|altera_pll:altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+

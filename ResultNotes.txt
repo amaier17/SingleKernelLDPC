@@ -1,0 +1,11 @@
+Date: March 3, 2015
+Portability Check
+From the localmemoryn_checknode restore point (having n_checknode workitems communicating through local memory)
+
+CPU:
+The program ran without issue on the CPU just like with the FPGA.  I have yet to compare the performance metrics
+
+GPU:
+The program did not run successfully. The status of the checknodes did not change during each iteration (checknode satisfication test) see the output_debug_integer.csv file for more details.
+Because of this, I can only assume that the local memory is not consistent across the kernel executions and that it is in fact cleared/refreshed each time.  To test this, I will voluntarily change
+the program so that the kernels complete all 32 iterations before returning to the host code.  This will keep the local memory consistent within the device and hopefully cause it to succeed
