@@ -104,10 +104,14 @@ __kernel __attribute__((reqd_work_group_size(N_CHECK_NODES,1,1))) void LDPCDecod
 	// Now we need to get the parity of the inputs
 	// This will determine the sign of the outputs
 	LLR parity = 0;
-	for(int input=0; input<check.n_inputs; input++)
-	{
-		parity ^= check.inputs[input] & SIGN_BIT;
-	}
+	parity =(check.inputs[0] & SIGN_BIT) ^ 
+			(check.inputs[1] & SIGN_BIT) ^
+			(check.inputs[2] & SIGN_BIT) ^ 
+			(check.inputs[3] & SIGN_BIT) ^
+			(check.inputs[4] & SIGN_BIT) ^
+			(check.inputs[5] & SIGN_BIT);
+			
+	
 
 
 
